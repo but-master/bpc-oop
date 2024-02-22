@@ -46,7 +46,7 @@ class Complex
 
     public static bool operator ==(Complex a, Complex b)
     {
-        //return (a.Realna == b.Realna & a.Imaginarni == b.Imaginarni) ? true : false;
+        //return (a.Realna == b.Realna && a.Imaginarni == b.Imaginarni) ? true : false;
         return (a.Realna == b.Realna && a.Imaginarni == b.Imaginarni);
     }
 
