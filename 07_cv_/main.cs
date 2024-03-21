@@ -10,8 +10,8 @@ namespace _07_cv_
     {
         static void Main(string[] args)
         {
-            int[] rada = {5, 9, 4, 2, 20};
-            string[] veta = {"virus", "ahoj", "aahoj"};
+            int[] rada = { 5, 9, 4, 2, 20 };
+            string[] veta = { "virus", "ahoj", "aahoj" };
             Kruh kruh1 = new Kruh(5);
             Kruh kruh2 = new Kruh(8);
             Obdelnik obdelnik1 = new Obdelnik(3, 4);
@@ -20,7 +20,7 @@ namespace _07_cv_
             Kruh[] kruhy = new Kruh[] { kruh1, kruh2 };
             Obdelnik[] obdelniky = new Obdelnik[] { obdelnik1, obdelnik2 };
             //Objekt2D[] ruzne = new Objekt2D[3];
-            Objekt2D[] ruzne = {obdelnik1, kruh2, obdelnik2, kruh1};
+            Objekt2D[] ruzne = { obdelnik1, kruh2, obdelnik2, kruh1 };
 
             Console.WriteLine("Největší číslo: " + Extremy.Nejvetsi(ref rada).ToString());
             Console.WriteLine("Největší číslo: " + Extremy.Nejmensi(ref rada).ToString());
@@ -35,7 +35,55 @@ namespace _07_cv_
             int[] cisla = { 1, 3, 5, 7, 9 };
             var filtrovanaCisla = cisla.Where(x => x >= 4 && x <= 8);
             Console.WriteLine("Filtrovaná pole int[]: " + string.Join(", ", filtrovanaCisla));
+
+
+
+
+            //D d = new D();
+            D c = new D();
+            ((C)c).y();
         }
+
+        class C
+        {
+            public C()
+            {
+                Console.Write("A");
+            }
+            
+            public C(int cis)
+            {
+                Console.Write("B");
+            }
+            public virtual void x()
+            {
+                Console.Write("C");
+            }
+            public virtual void y()
+            {
+                Console.Write("D");
+            }
+        }
+        class D : C
+        {
+            public D()
+            {
+                Console.Write("E");
+            }
+            public D(int cis) : base(cis) 
+            {
+                Console.Write("F");
+            }
+            public override void x()
+            {
+                Console.Write("G");
+            }
+            public new void y()
+            {
+                Console.Write("H");
+            }
+        }
+    
 
 
 
