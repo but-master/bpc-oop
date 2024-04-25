@@ -1,0 +1,49 @@
+﻿<Window x:Class="_12_cv_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12_cv_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- Prvni sloupec -->
+        <!-- <Label x:Name="operand1"  Content="1. operand" Grid.Row="0" Grid.Column="0" Padding="10"> -->
+        <!-- <Label x:Name="operand2"  Content="2. operand" Grid.Row="1" Grid.Column="0" Padding="10"> -->
+        <!-- <Label x:Name="operation" Content="Operace"    Grid.Row="3" Grid.Column="0" Padding="10"> -->
+
+
+        <!-- Druhy sloupec -->
+        <ComboBox Name="operace" Grid.Row="2" Grid.Column="1">
+            <ComboBoxItem Content="+" Tag="plus"></ComboBoxItem>
+            <ComboBoxItem Content="-" Tag="minus"></ComboBoxItem>
+            <ComboBoxItem Content="*" Tag="krat"></ComboBoxItem>
+            <ComboBoxItem Content="/" Tag="deleno"></ComboBoxItem>
+        </ComboBox>
+
+        <!-- Treti sloupec -->
+        <Button Content="Spočti" Grid.Row="1" Grid.Column="2" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="1. operand" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="90"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="2. operand" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Margin="0,8,0,0" Grid.Row="1"/>
+        <ComboBox Grid.Column="3" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="80" Height="20"/>
+
+        <!-- Ctvrty sloupec -->
+        <!-- <Label x:Name="result" Content="vyledek" Margin="12" Padding="10" FontSize="22" HorizontalContentAlignment="Right" VerticalContentAlignment="Middle" Grid.Column="3"/> -->
+
+    </Grid>
+</Window>

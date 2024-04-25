@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<!--
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+-->
+
+<form asp-page-handler="Calculate" method="post">
+    <table>
+        <tr>
+            <td>Operand 1: </td>
+            <td><input asp-for="CalcModel.Operand1" /></td>
+        </tr>
+        <tr>
+            <td>Operace: </td>
+            <td>
+                <select asp-for="CalcModel.Operation"
+                        asp-items="Model.OperationList"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>Operand 2: </td>
+            <td><input asp-for="CalcModel.Operand2" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button>Spocti</button></td>
+        </tr>
+    </table>
+</form>
+<div>Vysledek: @ViewData["ResultValue"]</div>
